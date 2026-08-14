@@ -5,6 +5,7 @@ import re
 
 import mss
 import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 from PIL import Image
 
 
@@ -58,7 +59,7 @@ canvas.pack(fill="both", expand=True)
 # SCREEN OCR
 # =========================
 
-sct = mss.mss()
+sct = mss.MSS()
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
